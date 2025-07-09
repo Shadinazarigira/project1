@@ -1,0 +1,20 @@
+#git
+create  .gitignore
+# فایل‌های پایتون
+pycache/
+*.pyc
+
+# فایل‌های مجازی
+env/
+venv/
+
+# فایل‌های IDE
+.vscode/
+.idea/
+
+# فایل‌های خروجی
+*.log
+*.db
+
+# فایل‌های حساس
+.env
