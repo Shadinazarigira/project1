@@ -1,27 +1,60 @@
 
+html, body {
+  margin:10px;
+  padding: 0;
+  text-align:right;
+}
 .menu {
   width: 30%;
   height: 1000px;
   float: right;
   background-color: DarkSeaGreen;
-
-
-}
-.circle {
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  background-color:#555;
-  margin-left: 130px;
-  margin-top: 75px;
 }
 .father{
   width:70%;
-  height:1000px;
+  float: left;
+
 }
-.eduacation{}
-.experiance{}
-.skills{}
-.certifications{}
-.achivements{}
+.eduacation{
+  height: 200px;
+  background-color: DarkKhaki;
+}
+.experiance{
+  height: 200px;
+}
+.skills{
+  height: 200px;
+  background-color: DarkKhaki;
+}
+.certifications{
+  height: 200px;
+}
+.achivements{
+  height: 200px;
+  background-color: DarkKhaki;
+}
+.rectangle1,.rectangle2,.rectangle3,.rectangle4,.rectangle5{
+  height: 200px;
+  width: 100px;
+  background-color: #555;
+  float: right;
+
+}
+
+.container img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-left: 130px;
+  margin-top: 75px;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
