@@ -1,0 +1,27 @@
+
+.menu {
+  width: 30%;
+  height: 1000px;
+  float: right;
+  background-color: DarkSeaGreen;
+
+
+}
+.circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color:#555;
+  margin-left: 130px;
+  margin-top: 75px;
+}
+.father{
+  width:70%;
+  height:1000px;
+}
+.eduacation{}
+.experiance{}
+.skills{}
+.certifications{}
+.achivements{}
+
