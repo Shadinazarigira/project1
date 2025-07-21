@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/loadingstyles.css">
+  <!-- link to font vazir or styles here -->
+</head>
+<body style="font-family: 'Vazir', sans-serif; text-align: center;">
+
+  <div class="container">
+    <div class="loader"></div>
+    <h1>در حال بروزرسانی</h1>
+    <!-- Display the countdown here -->
+    <div class="countdown" id="days-left"></div>
+    <p>
+      "بازاریابی خوب، شرکت را هوشمند جلوه می‌دهد. بازاریابی عالی، مشتری را باهوش می‌کند."
+    </p>
+  </div>
+
+  <script>
+    // تاریخ انقضا را به فرمت (YYYY-MM-DD) تنظیم کنید:
+    const expiryDateStr = "2025-08-27";
+    const expiryDate = new Date(expiryDateStr);
+    const daysLeftDiv = document.getElementById('days-left');
+
+    // تابع تبدیل اعداد انگلیسی به فارسی
+    function toPersianNum(num) {
+      const persianDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+      return num.toString().replace(/\d/g, d => persianDigits[d]);
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const diffTime = expiryDate - now;
+      const daysLeft = Math.max(0, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
+
+      daysLeftDiv.textContent = toPersianNum(daysLeft) + (daysLeft > 1 ? " روز باقی مانده" : " روز باقی مانده");
+
+      // همچنین به روز رسانی تایتل صفحه (انتخابی)
+      document.title = toPersianNum(daysLeft) + (daysLeft > 1 ? " روز باقی مانده" : " روز باقی مانده");
+    }
+
+    updateCountdown(); // اجرا در ابتدا
+    setInterval(updateCountdown, 60 * 60 * 1000); // به‌روزرسانی هر ساعت
+  </script>
+
+</body>
+</html>
