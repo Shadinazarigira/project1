@@ -63,13 +63,23 @@ body {
 }
 img {
   filter: hue-rotate(90deg); /* Shifts color hues */
+        animation: rotate 10s linear infinite;
 }
-
+/*img:hover{*/
+/*      background: #005fcc;*/
+/*}*/
 .motivational {
     animation: rotate 20s linear infinite;
     /* عنوان */
 }
+.hover-heading {
+  transition: color 0.3s ease;
+  color: #333;
+}
 
+.hover-heading:hover {
+  color: #3498db; /* Change to any color on hover */
+}
 h1 {
     font-size: 2.4rem;
     margin-bottom: 20px;
